@@ -14,7 +14,7 @@ class LibraryCollectionViewController: UICollectionViewController {
         static let inset: CGFloat = 20.0
     }
     
-    let MovieList = MovieInfo()
+    let movieList = MovieInfo().movie
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +33,20 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return MovieList.movie.count
+        return movieList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifier, for: indexPath) as? LibraryCollectionViewCell else { return UICollectionViewCell() }
-        cell.configureCell(movie: MovieList.movie[indexPath.row])
+        cell.configureCell(movie: movieList[indexPath.row])
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController else { return }
+        vc.movie = movieList[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {

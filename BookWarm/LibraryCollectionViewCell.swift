@@ -37,5 +37,7 @@ class LibraryCollectionViewCell: UICollectionViewCell {
         nameLabel.adjustsFontSizeToFitWidth = true
         openDateLabel.adjustsFontSizeToFitWidth = true
     }
+    
+    
 
 }
