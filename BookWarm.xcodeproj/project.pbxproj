@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C7AB29312A7799B300C023C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29302A7799B300C023C1 /* AppDelegate.swift */; };
 		C7AB29332A7799B300C023C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29322A7799B300C023C1 /* SceneDelegate.swift */; };
-		C7AB29352A7799B300C023C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29342A7799B300C023C1 /* ViewController.swift */; };
 		C7AB29382A7799B300C023C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29362A7799B300C023C1 /* Main.storyboard */; };
 		C7AB293A2A7799B400C023C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29392A7799B400C023C1 /* Assets.xcassets */; };
 		C7AB293D2A7799B400C023C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AB293B2A7799B400C023C1 /* LaunchScreen.storyboard */; };
@@ -17,13 +16,14 @@
 		C7AB29482A779B8E00C023C1 /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */; };
 		C7AB29492A779B8E00C023C1 /* LibraryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */; };
 		C7AB294B2A779CFB00C023C1 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */; };
+		C7AB294D2A77D6EF00C023C1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB294C2A77D6EF00C023C1 /* DetailViewController.swift */; };
+		C7AB294F2A77D70800C023C1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB294E2A77D70800C023C1 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C7AB292D2A7799B300C023C1 /* BookWarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AB29302A7799B300C023C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7AB29322A7799B300C023C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C7AB29342A7799B300C023C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7AB29372A7799B300C023C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7AB29392A7799B400C023C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7AB293C2A7799B400C023C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +32,8 @@
 		C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCollectionViewCell.xib; sourceTree = "<group>"; };
 		C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		C7AB294C2A77D6EF00C023C1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C7AB294E2A77D70800C023C1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,11 @@
 		C7AB292F2A7799B300C023C1 /* BookWarm */ = {
 			isa = PBXGroup;
 			children = (
+				C7AB294E2A77D70800C023C1 /* SearchViewController.swift */,
 				C7AB29302A7799B300C023C1 /* AppDelegate.swift */,
 				C7AB29322A7799B300C023C1 /* SceneDelegate.swift */,
-				C7AB29342A7799B300C023C1 /* ViewController.swift */,
 				C7AB29362A7799B300C023C1 /* Main.storyboard */,
+				C7AB294C2A77D6EF00C023C1 /* DetailViewController.swift */,
 				C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */,
 				C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */,
 				C7AB29442A779B1F00C023C1 /* LibraryCollectionViewController.swift */,
@@ -151,10 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AB294F2A77D70800C023C1 /* SearchViewController.swift in Sources */,
 				C7AB29482A779B8E00C023C1 /* LibraryCollectionViewCell.swift in Sources */,
 				C7AB29452A779B1F00C023C1 /* LibraryCollectionViewController.swift in Sources */,
-				C7AB29352A7799B300C023C1 /* ViewController.swift in Sources */,
 				C7AB29312A7799B300C023C1 /* AppDelegate.swift in Sources */,
+				C7AB294D2A77D6EF00C023C1 /* DetailViewController.swift in Sources */,
 				C7AB294B2A779CFB00C023C1 /* MovieInfo.swift in Sources */,
 				C7AB29332A7799B300C023C1 /* SceneDelegate.swift in Sources */,
 			);

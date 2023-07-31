@@ -42,4 +42,13 @@ class LibraryCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SearchViewController")
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.modalPresentationStyle = .fullScreen
+        nvc.modalTransitionStyle = .coverVertical
+        present(nvc, animated: true)
+    }
+    
 }
