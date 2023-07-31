@@ -13,6 +13,10 @@
 		C7AB29382A7799B300C023C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29362A7799B300C023C1 /* Main.storyboard */; };
 		C7AB293A2A7799B400C023C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29392A7799B400C023C1 /* Assets.xcassets */; };
 		C7AB293D2A7799B400C023C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AB293B2A7799B400C023C1 /* LaunchScreen.storyboard */; };
+		C7AB29452A779B1F00C023C1 /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29442A779B1F00C023C1 /* LibraryCollectionViewController.swift */; };
+		C7AB29482A779B8E00C023C1 /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */; };
+		C7AB29492A779B8E00C023C1 /* LibraryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */; };
+		C7AB294B2A779CFB00C023C1 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C7AB29392A7799B400C023C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7AB293C2A7799B400C023C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7AB293E2A7799B400C023C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7AB29442A779B1F00C023C1 /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
+		C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCollectionViewCell.xib; sourceTree = "<group>"; };
+		C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				C7AB29322A7799B300C023C1 /* SceneDelegate.swift */,
 				C7AB29342A7799B300C023C1 /* ViewController.swift */,
 				C7AB29362A7799B300C023C1 /* Main.storyboard */,
+				C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */,
+				C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */,
+				C7AB29442A779B1F00C023C1 /* LibraryCollectionViewController.swift */,
+				C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */,
 				C7AB29392A7799B400C023C1 /* Assets.xcassets */,
 				C7AB293B2A7799B400C023C1 /* LaunchScreen.storyboard */,
 				C7AB293E2A7799B400C023C1 /* Info.plist */,
@@ -127,6 +139,7 @@
 			files = (
 				C7AB293D2A7799B400C023C1 /* LaunchScreen.storyboard in Resources */,
 				C7AB293A2A7799B400C023C1 /* Assets.xcassets in Resources */,
+				C7AB29492A779B8E00C023C1 /* LibraryCollectionViewCell.xib in Resources */,
 				C7AB29382A7799B300C023C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AB29482A779B8E00C023C1 /* LibraryCollectionViewCell.swift in Sources */,
+				C7AB29452A779B1F00C023C1 /* LibraryCollectionViewController.swift in Sources */,
 				C7AB29352A7799B300C023C1 /* ViewController.swift in Sources */,
 				C7AB29312A7799B300C023C1 /* AppDelegate.swift in Sources */,
+				C7AB294B2A779CFB00C023C1 /* MovieInfo.swift in Sources */,
 				C7AB29332A7799B300C023C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
