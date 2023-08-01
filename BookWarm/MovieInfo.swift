@@ -14,6 +14,16 @@ struct Movie {
     let runtime: Int
     let overview: String
     let rate: Double
+    var isLike: Bool
+    
+    init(title: String, releaseDate: String, runtime: Int, overview: String, rate: Double, isLike: Bool = false) {
+        self.title = title
+        self.releaseDate = releaseDate
+        self.runtime = runtime
+        self.overview = overview
+        self.rate = rate
+        self.isLike = isLike
+    }
 }
 
 struct MovieInfo {

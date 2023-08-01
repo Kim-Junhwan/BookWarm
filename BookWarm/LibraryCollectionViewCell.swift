@@ -17,9 +17,8 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
-    
     @IBOutlet weak var openDateLabel: UILabel!
-    
+    @IBOutlet weak var likeButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,6 +35,8 @@ class LibraryCollectionViewCell: UICollectionViewCell {
         openDateLabel.text = movie.releaseDate
         nameLabel.adjustsFontSizeToFitWidth = true
         openDateLabel.adjustsFontSizeToFitWidth = true
+        let likeButtonImage = movie.isLike ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        likeButton.setImage(likeButtonImage, for: .normal)
     }
     
     

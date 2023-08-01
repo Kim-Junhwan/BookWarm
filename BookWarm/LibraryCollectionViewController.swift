@@ -14,7 +14,7 @@ class LibraryCollectionViewController: UICollectionViewController {
         static let inset: CGFloat = 20.0
     }
     
-    let movieList = MovieInfo().movie
+    var movieList = MovieInfo().movie
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +39,20 @@ class LibraryCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifier, for: indexPath) as? LibraryCollectionViewCell else { return UICollectionViewCell() }
         cell.configureCell(movie: movieList[indexPath.row])
-    
+        cell.likeButton.tag = indexPath.item
+        cell.likeButton.addTarget(self, action: #selector(tapLikeButton), for: .touchUpInside)
         return cell
     }
     
+    
+    @objc func tapLikeButton(_ sender: UIButton) {
+        movieList[sender.tag].isLike.toggle()
+        collectionView.reloadData()
+        //collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("select")
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController else { return }
         vc.movie = movieList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
