@@ -12,6 +12,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     enum Metric {
         static let numberOfColumns: Int = 2
         static let inset: CGFloat = 20.0
+        static let cellHeight: CGFloat = 200.0
     }
     
     var movieList = MovieInfo().movie
@@ -28,7 +29,7 @@ class LibraryCollectionViewController: UICollectionViewController {
         flowLayout.minimumInteritemSpacing = Metric.inset
         flowLayout.sectionInset = UIEdgeInsets(top: Metric.inset, left: Metric.inset, bottom: Metric.inset, right: Metric.inset)
         let width = UIScreen.main.bounds.width
-        flowLayout.itemSize = CGSize(width: (width-(3*Metric.inset))/2, height: 200)
+        flowLayout.itemSize = CGSize(width: (width-(3*Metric.inset))/CGFloat(Metric.numberOfColumns), height: Metric.cellHeight)
         collectionView.collectionViewLayout = flowLayout
     }
 
@@ -47,12 +48,10 @@ class LibraryCollectionViewController: UICollectionViewController {
     
     @objc func tapLikeButton(_ sender: UIButton) {
         movieList[sender.tag].isLike.toggle()
-        collectionView.reloadData()
-        //collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
+        collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("select")
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController else { return }
         vc.movie = movieList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
