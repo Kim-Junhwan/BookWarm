@@ -47,6 +47,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C74E9AF12A7912620001B602 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C7AB29302A7799B300C023C1 /* AppDelegate.swift */,
+				C7AB29322A7799B300C023C1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C74E9AF22A7912740001B602 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C74E9AF32A79127C0001B602 /* LibraryScene */,
+				C7AB29362A7799B300C023C1 /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C74E9AF32A79127C0001B602 /* LibraryScene */ = {
+			isa = PBXGroup;
+			children = (
+				C74E9AF52A7914EB0001B602 /* BookList */,
+				C74E9AF42A7914DF0001B602 /* Detail */,
+				C74E9AF62A79150D0001B602 /* Search */,
+			);
+			path = LibraryScene;
+			sourceTree = "<group>";
+		};
+		C74E9AF42A7914DF0001B602 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C7AB294C2A77D6EF00C023C1 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C74E9AF52A7914EB0001B602 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				C74E9AF72A79151A0001B602 /* Cell */,
+				C7AB29442A779B1F00C023C1 /* LibraryCollectionViewController.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		C74E9AF62A79150D0001B602 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C7AB294E2A77D70800C023C1 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C74E9AF72A79151A0001B602 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */,
+				C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C74E9AF82A7915330001B602 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C74E9AF92A7915380001B602 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C74E9AF92A7915380001B602 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C74E9AFA2A7915850001B602 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7AB29392A7799B400C023C1 /* Assets.xcassets */,
+				C7AB293E2A7799B400C023C1 /* Info.plist */,
+				C7AB293B2A7799B400C023C1 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C7AB29242A7799B300C023C1 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +154,10 @@
 		C7AB292F2A7799B300C023C1 /* BookWarm */ = {
 			isa = PBXGroup;
 			children = (
-				C7AB294E2A77D70800C023C1 /* SearchViewController.swift */,
-				C7AB29302A7799B300C023C1 /* AppDelegate.swift */,
-				C7AB29322A7799B300C023C1 /* SceneDelegate.swift */,
-				C7AB29362A7799B300C023C1 /* Main.storyboard */,
-				C7AB294C2A77D6EF00C023C1 /* DetailViewController.swift */,
-				C7AB29462A779B8E00C023C1 /* LibraryCollectionViewCell.swift */,
-				C7AB29472A779B8E00C023C1 /* LibraryCollectionViewCell.xib */,
-				C7AB29442A779B1F00C023C1 /* LibraryCollectionViewController.swift */,
-				C7AB294A2A779CFB00C023C1 /* MovieInfo.swift */,
-				C7AB29392A7799B400C023C1 /* Assets.xcassets */,
-				C7AB293B2A7799B400C023C1 /* LaunchScreen.storyboard */,
-				C7AB293E2A7799B400C023C1 /* Info.plist */,
+				C74E9AFA2A7915850001B602 /* Resources */,
+				C74E9AF12A7912620001B602 /* App */,
+				C74E9AF82A7915330001B602 /* Domain */,
+				C74E9AF22A7912740001B602 /* Presentation */,
 			);
 			path = BookWarm;
 			sourceTree = "<group>";
@@ -309,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SBAHW5F54N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BookWarm/Info.plist;
+				INFOPLIST_FILE = BookWarm/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -337,7 +417,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SBAHW5F54N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BookWarm/Info.plist;
+				INFOPLIST_FILE = BookWarm/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
