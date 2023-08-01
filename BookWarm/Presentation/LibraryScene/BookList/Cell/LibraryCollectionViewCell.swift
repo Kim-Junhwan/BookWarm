@@ -19,9 +19,9 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var openDateLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func layoutSubviews() {

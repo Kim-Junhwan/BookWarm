@@ -15,6 +15,10 @@ class LibraryCollectionViewController: UICollectionViewController {
         static let cellHeight: CGFloat = 200.0
     }
     
+    enum Identifier {
+        static let storyboard: String = "Main"
+    }
+    
     var movieList = MovieInfo().movie
 
     override func viewDidLoad() {
@@ -52,13 +56,13 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController else { return }
+        guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
         vc.movie = movieList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SearchViewController")
+        let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: SearchViewController.self))
         let nvc = UINavigationController(rootViewController: vc)
         nvc.modalPresentationStyle = .fullScreen
         nvc.modalTransitionStyle = .coverVertical

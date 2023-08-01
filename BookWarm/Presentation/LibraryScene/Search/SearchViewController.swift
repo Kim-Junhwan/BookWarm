@@ -8,15 +8,20 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
+    enum Constant {
+        static let title: String = "검색화면"
+        static let dissmissButtonImage: String = "xmark"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setDismissButton()
-        title = "검색화면"
+        title = Constant.title
     }
     
     func setDismissButton() {
-        let dismissButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(dismissViewController))
+        let dismissButton = UIBarButtonItem(image: UIImage(systemName: Constant.dissmissButtonImage), style: .plain, target: self, action: #selector(dismissViewController))
         navigationItem.leftBarButtonItem = dismissButton
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
