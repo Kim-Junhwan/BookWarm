@@ -39,6 +39,8 @@ class LibraryCollectionViewCell: UICollectionViewCell {
         likeButton.setImage(likeButtonImage, for: .normal)
     }
     
+    @IBAction func tapLikeButton(_ sender: UIButton) {
+    }
     
 
 }
