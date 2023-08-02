@@ -45,7 +45,8 @@ class BrowseViewController: UIViewController {
     func presentDetailView(movie: Movie) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
         vc.movie = movie
-        navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 
 }
