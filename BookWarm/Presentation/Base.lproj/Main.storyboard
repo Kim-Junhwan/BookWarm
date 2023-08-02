@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="65" y="711"/>
         </scene>
-        <!--Item-->
+        <!--둘러보기-->
         <scene sceneID="hiY-NX-DE5">
             <objects>
                 <viewController id="Jdw-Ow-l9O" customClass="BrowseViewController" customModule="BookWarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,13 +198,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="deF-lr-YJ9">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HIL-yR-gH7">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="138"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bCM-v6-GT2">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bCM-v6-GT2">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -223,7 +223,7 @@
                             <constraint firstItem="deF-lr-YJ9" firstAttribute="top" secondItem="YOR-Bz-Krb" secondAttribute="top" id="zco-F5-aNp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gJW-Qj-8o7"/>
+                    <navigationItem key="navigationItem" title="둘러보기" id="E1s-sX-Ka5"/>
                     <connections>
                         <outlet property="collectionView" destination="HIL-yR-gH7" id="qZ1-wD-smJ"/>
                         <outlet property="tableView" destination="deF-lr-YJ9" id="F5Z-0f-fQf"/>
@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MZ-Zc-EJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820.6106870229007" y="-799.29577464788736"/>
+            <point key="canvasLocation" x="2747.3282442748091" y="-799.29577464788736"/>
         </scene>
         <!--Item-->
         <scene sceneID="eZc-Xq-sXd">
@@ -263,12 +263,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="aM9-FQ-gso" kind="relationship" relationship="viewControllers" id="h39-4k-5ic"/>
-                        <segue destination="Jdw-Ow-l9O" kind="relationship" relationship="viewControllers" id="9qX-Xi-sIZ"/>
+                        <segue destination="8fT-LI-V2N" kind="relationship" relationship="viewControllers" id="9qX-Xi-sIZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZQ-ez-NcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893.89312977099235" y="-106.33802816901409"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="9HE-Xb-qNm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8fT-LI-V2N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gJW-Qj-8o7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXT-PH-GiG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jdw-Ow-l9O" kind="relationship" relationship="rootViewController" id="aQT-fe-ozJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Fk-OM-3Fx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820.6106870229007" y="-799.29577464788736"/>
         </scene>
     </scenes>
     <resources>

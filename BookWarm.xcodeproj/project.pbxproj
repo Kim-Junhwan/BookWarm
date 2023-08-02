@@ -11,6 +11,8 @@
 		C74E9B012A7A28AF0001B602 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74E9B002A7A28AF0001B602 /* BrowseViewController.swift */; };
 		C74E9B062A7A2BBF0001B602 /* BrowseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74E9B042A7A2BBF0001B602 /* BrowseTableViewCell.swift */; };
 		C74E9B072A7A2BBF0001B602 /* BrowseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74E9B052A7A2BBF0001B602 /* BrowseTableViewCell.xib */; };
+		C74E9B0D2A7A31540001B602 /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74E9B0B2A7A31540001B602 /* BrowseCollectionViewCell.swift */; };
+		C74E9B0E2A7A31540001B602 /* BrowseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74E9B0C2A7A31540001B602 /* BrowseCollectionViewCell.xib */; };
 		C7AB29312A7799B300C023C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29302A7799B300C023C1 /* AppDelegate.swift */; };
 		C7AB29332A7799B300C023C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB29322A7799B300C023C1 /* SceneDelegate.swift */; };
 		C7AB29382A7799B300C023C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AB29362A7799B300C023C1 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		C74E9B002A7A28AF0001B602 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		C74E9B042A7A2BBF0001B602 /* BrowseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseTableViewCell.swift; sourceTree = "<group>"; };
 		C74E9B052A7A2BBF0001B602 /* BrowseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseTableViewCell.xib; sourceTree = "<group>"; };
+		C74E9B0B2A7A31540001B602 /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C74E9B0C2A7A31540001B602 /* BrowseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseCollectionViewCell.xib; sourceTree = "<group>"; };
 		C7AB292D2A7799B300C023C1 /* BookWarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AB29302A7799B300C023C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7AB29322A7799B300C023C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		C74E9AFF2A7A28940001B602 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
+				C74E9B0A2A7A313B0001B602 /* CollectionView */,
 				C74E9B022A7A29870001B602 /* TableView */,
 				C74E9B002A7A28AF0001B602 /* BrowseViewController.swift */,
 			);
@@ -169,6 +174,15 @@
 				C74E9B052A7A2BBF0001B602 /* BrowseTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C74E9B0A2A7A313B0001B602 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C74E9B0B2A7A31540001B602 /* BrowseCollectionViewCell.swift */,
+				C74E9B0C2A7A31540001B602 /* BrowseCollectionViewCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		C7AB29242A7799B300C023C1 = {
@@ -257,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7AB293D2A7799B400C023C1 /* LaunchScreen.storyboard in Resources */,
+				C74E9B0E2A7A31540001B602 /* BrowseCollectionViewCell.xib in Resources */,
 				C7AB293A2A7799B400C023C1 /* Assets.xcassets in Resources */,
 				C74E9AFE2A7A277D0001B602 /* Sub.storyboard in Resources */,
 				C7AB29492A779B8E00C023C1 /* LibraryCollectionViewCell.xib in Resources */,
@@ -280,6 +295,7 @@
 				C7AB294D2A77D6EF00C023C1 /* DetailViewController.swift in Sources */,
 				C7AB294B2A779CFB00C023C1 /* MovieInfo.swift in Sources */,
 				C74E9B012A7A28AF0001B602 /* BrowseViewController.swift in Sources */,
+				C74E9B0D2A7A31540001B602 /* BrowseCollectionViewCell.swift in Sources */,
 				C7AB29332A7799B300C023C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
