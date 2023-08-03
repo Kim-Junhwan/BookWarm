@@ -103,7 +103,7 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         navigationItem.titleView = nil
-        navigationItem.rightBarButtonItem?.isHidden.toggle()
+        navigationItem.rightBarButtonItem?.isHidden = false
         collectionView.reloadData()
     }
     
@@ -115,7 +115,7 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         if searchBar.text == "" {
             navigationItem.titleView = nil
-            navigationItem.rightBarButtonItem?.isHidden.toggle()
+            navigationItem.rightBarButtonItem?.isHidden = false
         }
     }
 }
