@@ -65,6 +65,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {
         navigationItem.titleView = searchBar
         navigationItem.rightBarButtonItem?.isHidden.toggle()
+        searchBar.becomeFirstResponder()
     }
 }
 
@@ -93,5 +94,9 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         navigationItem.titleView = nil
         navigationItem.rightBarButtonItem?.isHidden.toggle()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
 }
