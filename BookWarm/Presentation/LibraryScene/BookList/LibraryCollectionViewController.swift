@@ -19,13 +19,16 @@ class LibraryCollectionViewController: UICollectionViewController {
         static let storyboard: String = "Main"
     }
     
-    var movieList = MovieInfo().movie
     @IBOutlet weak var tabBarSearchButton: UIBarButtonItem!
+    
     let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.showsCancelButton = true
         return searchBar
     }()
+    
+    var movieList = MovieInfo().movie
+    var currentMovieList: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +75,9 @@ class LibraryCollectionViewController: UICollectionViewController {
 extension LibraryCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if searchBar.text != "" {
+            return currentMovieList.count
+        }
         return movieList.count
     }
 
@@ -91,12 +97,14 @@ extension LibraryCollectionViewController {
 }
 
 extension LibraryCollectionViewController: UISearchBarDelegate {
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         navigationItem.titleView = nil
         navigationItem.rightBarButtonItem?.isHidden.toggle()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        currentMovieList = movieList.filter({ $0.title.contains(searchText) })
+        collectionView.reloadData()
     }
 }
