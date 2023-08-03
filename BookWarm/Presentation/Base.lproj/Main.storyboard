@@ -52,14 +52,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZk-7C-d3c">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="KZk-7C-d3c">
                                 <rect key="frame" x="0.0" y="50" width="375" height="728"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-fA-GVQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="961.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1151.3333333333333"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hRy-qQ-86e">
-                                                <rect key="frame" x="20" y="0.0" width="335" height="961.33333333333337"/>
+                                                <rect key="frame" x="20" y="0.0" width="335" height="1131.3333333333333"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5e-Bh-esX">
                                                         <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="46.333333333333336"/>
@@ -144,9 +144,21 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qJZ-x8-ovO">
+                                                        <rect key="frame" x="0.0" y="981.33333333333326" width="335" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="d37-uB-r3z"/>
+                                                        </constraints>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="fLv-sq-Pz7" firstAttribute="width" secondItem="hRy-qQ-86e" secondAttribute="width" id="ZXQ-pl-MZr"/>
+                                                    <constraint firstItem="qJZ-x8-ovO" firstAttribute="width" secondItem="hRy-qQ-86e" secondAttribute="width" id="y8x-Rb-bJY"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -154,7 +166,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="hRy-qQ-86e" secondAttribute="trailing" constant="20" id="EXy-oW-65E"/>
                                             <constraint firstItem="hRy-qQ-86e" firstAttribute="top" secondItem="UaZ-fA-GVQ" secondAttribute="top" id="akv-H6-kFv"/>
-                                            <constraint firstAttribute="bottom" secondItem="hRy-qQ-86e" secondAttribute="bottom" id="gtN-6f-cCP"/>
+                                            <constraint firstAttribute="bottom" secondItem="hRy-qQ-86e" secondAttribute="bottom" constant="20" id="gtN-6f-cCP"/>
                                             <constraint firstItem="hRy-qQ-86e" firstAttribute="leading" secondItem="UaZ-fA-GVQ" secondAttribute="leading" constant="20" id="ldm-8l-N85"/>
                                         </constraints>
                                     </view>
@@ -182,6 +194,7 @@
                     <navigationItem key="navigationItem" id="DgY-df-hFr"/>
                     <connections>
                         <outlet property="dissmissButton" destination="e5e-Bh-esX" id="pJc-z0-Apz"/>
+                        <outlet property="memoTextView" destination="qJZ-x8-ovO" id="AGp-Ef-cY9"/>
                         <outlet property="nameLabel" destination="bND-zo-Tni" id="O0g-il-9Of"/>
                         <outlet property="overviewLabel" destination="Pob-TK-BLh" id="TlA-Th-jjc"/>
                         <outlet property="posterImageView" destination="fLv-sq-Pz7" id="EGd-xc-IdA"/>
