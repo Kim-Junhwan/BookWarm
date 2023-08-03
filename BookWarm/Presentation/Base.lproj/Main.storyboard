@@ -12,7 +12,7 @@
         <scene sceneID="uTS-Ls-ez0">
             <objects>
                 <collectionViewController id="HPa-l3-X4d" customClass="LibraryCollectionViewController" customModule="BookWarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JIY-5P-XDK">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="JIY-5P-XDK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9952727862240871" green="0.79827460690731777" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,6 +36,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tabBarSearchButton" destination="msa-aD-LpY" id="Zfy-cq-bBd"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rke-uf-7an" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

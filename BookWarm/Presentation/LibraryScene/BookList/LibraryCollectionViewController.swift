@@ -20,11 +20,27 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     
     var movieList = MovieInfo().movie
+    @IBOutlet weak var tabBarSearchButton: UIBarButtonItem!
+    let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = true
+        return searchBar
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(UINib(nibName: LibraryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: LibraryCollectionViewCell.identifier)
+        registerCollectionViewCell()
+        setSearchBar()
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
         layoutCollectionView()
+    }
+    
+    func registerCollectionViewCell() {
+        let movieCellNib = UINib(nibName: LibraryCollectionViewCell.identifier, bundle: nil)
+        collectionView.register(movieCellNib, forCellWithReuseIdentifier: LibraryCollectionViewCell.identifier)
     }
     
     func layoutCollectionView() {
@@ -32,10 +48,27 @@ class LibraryCollectionViewController: UICollectionViewController {
         flowLayout.minimumLineSpacing = Metric.inset
         flowLayout.minimumInteritemSpacing = Metric.inset
         flowLayout.sectionInset = UIEdgeInsets(top: Metric.inset, left: Metric.inset, bottom: Metric.inset, right: Metric.inset)
-        let width = UIScreen.main.bounds.width
+        let width = view.window?.screen.bounds.width ?? .zero
         flowLayout.itemSize = CGSize(width: (width-(3*Metric.inset))/CGFloat(Metric.numberOfColumns), height: Metric.cellHeight)
         collectionView.collectionViewLayout = flowLayout
     }
+    
+    func setSearchBar() {
+        searchBar.delegate = self
+    }
+    
+    @objc func tapLikeButton(_ sender: UIButton) {
+        movieList[sender.tag].isLike.toggle()
+        collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
+    }
+    
+    @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {
+        navigationItem.titleView = searchBar
+        navigationItem.rightBarButtonItem?.isHidden.toggle()
+    }
+}
+
+extension LibraryCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieList.count
@@ -49,24 +82,16 @@ class LibraryCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    
-    @objc func tapLikeButton(_ sender: UIButton) {
-        movieList[sender.tag].isLike.toggle()
-        collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
         vc.movie = movieList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {
-        let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: SearchViewController.self))
-        let nvc = UINavigationController(rootViewController: vc)
-        nvc.modalPresentationStyle = .fullScreen
-        nvc.modalTransitionStyle = .coverVertical
-        present(nvc, animated: true)
+}
+
+extension LibraryCollectionViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.titleView = nil
+        navigationItem.rightBarButtonItem?.isHidden.toggle()
     }
-    
 }

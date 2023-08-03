@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     }
     
     func checkShowDismissButton() {
-        guard let _ = navigationController else { return }
+        guard let navigationController else { return }
         dissmissButton.isHidden = true
     }
     
