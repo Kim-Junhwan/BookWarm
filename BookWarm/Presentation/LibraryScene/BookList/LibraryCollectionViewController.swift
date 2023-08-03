@@ -83,7 +83,8 @@ extension LibraryCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifier, for: indexPath) as? LibraryCollectionViewCell else { return UICollectionViewCell() }
-        cell.configureCell(movie: movieList[indexPath.row])
+        let cellMovie = searchBar.text == "" ? movieList[indexPath.row] : currentMovieList[indexPath.row]
+        cell.configureCell(movie: cellMovie)
         cell.likeButton.tag = indexPath.item
         cell.likeButton.addTarget(self, action: #selector(tapLikeButton), for: .touchUpInside)
         return cell
@@ -91,7 +92,8 @@ extension LibraryCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
-        vc.movie = movieList[indexPath.row]
+        let cellMovie = searchBar.text == "" ? movieList[indexPath.row] : currentMovieList[indexPath.row]
+        vc.movie = cellMovie
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -99,12 +101,21 @@ extension LibraryCollectionViewController {
 extension LibraryCollectionViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
         navigationItem.titleView = nil
         navigationItem.rightBarButtonItem?.isHidden.toggle()
+        collectionView.reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentMovieList = movieList.filter({ $0.title.contains(searchText) })
         collectionView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if searchBar.text == "" {
+            navigationItem.titleView = nil
+            navigationItem.rightBarButtonItem?.isHidden.toggle()
+        }
     }
 }
