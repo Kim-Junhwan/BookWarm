@@ -34,6 +34,7 @@ class LibraryCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         registerCollectionViewCell()
         setSearchBar()
+        currentMovieList = movieList
     }
     
     override func updateViewConstraints() {
@@ -61,8 +62,13 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     
     @objc func tapLikeButton(_ sender: UIButton) {
-        movieList[sender.tag].isLike.toggle()
-        collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
+        var movie = currentMovieList[sender.tag]
+        movie.isLike.toggle()
+        if let movieIndex = movieList.firstIndex(where: { $0.title == movie.title }) {
+            movieList[movieIndex] = movie
+            currentMovieList[sender.tag].isLike.toggle()
+        }
+        collectionView.reloadData()
     }
     
     @IBAction func tapSearchButton(_ sender: UIBarButtonItem) {
@@ -75,15 +81,12 @@ class LibraryCollectionViewController: UICollectionViewController {
 extension LibraryCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searchBar.text != "" {
-            return currentMovieList.count
-        }
-        return movieList.count
+        return currentMovieList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifier, for: indexPath) as? LibraryCollectionViewCell else { return UICollectionViewCell() }
-        let cellMovie = searchBar.text == "" ? movieList[indexPath.row] : currentMovieList[indexPath.row]
+        let cellMovie = currentMovieList[indexPath.row]
         cell.configureCell(movie: cellMovie)
         cell.likeButton.tag = indexPath.item
         cell.likeButton.addTarget(self, action: #selector(tapLikeButton), for: .touchUpInside)
@@ -92,7 +95,7 @@ extension LibraryCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
-        let cellMovie = searchBar.text == "" ? movieList[indexPath.row] : currentMovieList[indexPath.row]
+        let cellMovie = currentMovieList[indexPath.row]
         vc.movie = cellMovie
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -109,6 +112,9 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentMovieList = movieList.filter({ $0.title.contains(searchText) })
+        if searchText == ""{
+            currentMovieList = movieList
+        }
         collectionView.reloadData()
     }
     
@@ -116,6 +122,8 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
         if searchBar.text == "" {
             navigationItem.titleView = nil
             navigationItem.rightBarButtonItem?.isHidden = false
+            currentMovieList = movieList
         }
+        collectionView.reloadData()
     }
 }
