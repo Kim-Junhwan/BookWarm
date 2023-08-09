@@ -49,7 +49,6 @@ class LibraryCollectionViewController: UICollectionViewController {
         registerCollectionViewCell()
         setSearchBar()
         currentMovieList = bookList
-        collectionView.prefetchDataSource = self
         
     }
     
@@ -98,14 +97,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
 }
 
-extension LibraryCollectionViewController: UICollectionViewDataSourcePrefetching {
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        print("download \(indexPaths)")
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
-        print("cancel \(indexPaths)")
-    }
+extension LibraryCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookList.count
@@ -121,7 +113,6 @@ extension LibraryCollectionViewController: UICollectionViewDataSourcePrefetching
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(collectionView.contentOffset)
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
         let cellMovie = bookList[indexPath.row]
         vc.book = cellMovie
@@ -129,7 +120,6 @@ extension LibraryCollectionViewController: UICollectionViewDataSourcePrefetching
     }
     
     func getBookList(searchText: String, page: Int) {
-        
         let url = "https://dapi.kakao.com/v3/search/book"
         let header: HTTPHeaders = ["Content-Type" : "application/json","Authorization":"KakaoAK \(APIkey.kakao)"]
         AF.request(url, parameters: ["query":searchText, "page":page], headers: header).validate().response { response in
