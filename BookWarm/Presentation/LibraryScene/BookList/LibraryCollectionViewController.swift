@@ -160,7 +160,7 @@ extension LibraryCollectionViewController: UICollectionViewDataSourcePrefetching
             case .failure(let error):
                     print(error)
             }
-            self.flag = false
+            
         }
     }
 }
@@ -205,5 +205,9 @@ extension LibraryCollectionViewController {
             getBookList(searchText: searchBar.text!, page: nextPage)
             currentPage += 1
         }
+    }
+    
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        flag = false
     }
 }
