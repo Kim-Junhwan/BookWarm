@@ -27,11 +27,7 @@ class BrowseTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(movie: Movie) {
-        posterImageView.image = UIImage(named: movie.title)
-        nameLabel.text = movie.title
-        scoreLabel.text = String(format: "%.2f", movie.rate)
-        releaseDateLabel.text = movie.releaseDate
+    func configureCell(book: Book) {
     }
     
 }

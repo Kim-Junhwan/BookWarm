@@ -29,5 +29,4 @@ class SearchViewController: UIViewController {
     @objc func dismissViewController() {
         dismiss(animated: true)
     }
-
 }

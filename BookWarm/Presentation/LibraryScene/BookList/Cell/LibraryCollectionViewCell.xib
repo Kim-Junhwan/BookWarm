@@ -77,8 +77,8 @@
             <connections>
                 <outlet property="likeButton" destination="y54-i8-IAD" id="5Du-Ne-710"/>
                 <outlet property="nameLabel" destination="EGw-ao-R75" id="d06-5f-eV1"/>
-                <outlet property="openDateLabel" destination="lyE-G7-wOq" id="lgn-fM-ae4"/>
                 <outlet property="posterImageView" destination="BUo-OX-BIZ" id="5k2-X8-Y7D"/>
+                <outlet property="priceLabel" destination="lyE-G7-wOq" id="lgn-fM-ae4"/>
             </connections>
             <point key="canvasLocation" x="203.0534351145038" y="25.704225352112676"/>
         </collectionViewCell>

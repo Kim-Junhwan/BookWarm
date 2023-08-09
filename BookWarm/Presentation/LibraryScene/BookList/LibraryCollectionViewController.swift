@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LibraryCollectionViewController: UICollectionViewController {
     
@@ -27,14 +29,32 @@ class LibraryCollectionViewController: UICollectionViewController {
         return searchBar
     }()
     
-    var movieList = MovieInfo().movie
-    var currentMovieList: [Movie] = []
+    var currentPage: Int = 1 {
+        didSet {
+            nextPage = currentPage + 1
+        }
+    }
+    var nextPage: Int = 1
+    var isEnd: Bool = false
+    var bookList = [Book]()
+    var currentMovieList: [Book] = [] {
+        didSet {
+        }
+    }
+    var currentSearchText: String = ""
+    var flag: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCollectionViewCell()
         setSearchBar()
-        currentMovieList = movieList
+        currentMovieList = bookList
+        collectionView.prefetchDataSource = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     override func updateViewConstraints() {
@@ -62,11 +82,11 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     
     @objc func tapLikeButton(_ sender: UIButton) {
+        currentMovieList[sender.tag].isLike.toggle()
         var movie = currentMovieList[sender.tag]
-        movie.isLike.toggle()
-        if let movieIndex = movieList.firstIndex(where: { $0.title == movie.title }) {
-            movieList[movieIndex] = movie
-            currentMovieList[sender.tag].isLike.toggle()
+        if let movieIndex = bookList.firstIndex(where: { $0.title == movie.title }) {
+            bookList[movieIndex] = movie
+            
         }
         collectionView.reloadData()
     }
@@ -78,26 +98,70 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
 }
 
-extension LibraryCollectionViewController {
+extension LibraryCollectionViewController: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        print("download \(indexPaths)")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
+        print("cancel \(indexPaths)")
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return currentMovieList.count
+        return bookList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifier, for: indexPath) as? LibraryCollectionViewCell else { return UICollectionViewCell() }
-        let cellMovie = currentMovieList[indexPath.row]
-        cell.configureCell(movie: cellMovie)
+        let cellMovie = bookList[indexPath.row]
+        cell.configureCell(book: cellMovie)
         cell.likeButton.tag = indexPath.item
         cell.likeButton.addTarget(self, action: #selector(tapLikeButton), for: .touchUpInside)
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(collectionView.contentOffset)
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
-        let cellMovie = currentMovieList[indexPath.row]
-        vc.movie = cellMovie
+        let cellMovie = bookList[indexPath.row]
+        vc.book = cellMovie
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func getBookList(searchText: String, page: Int) {
+        
+        let url = "https://dapi.kakao.com/v3/search/book"
+        let header: HTTPHeaders = ["Content-Type" : "application/json","Authorization":"KakaoAK \(APIkey.kakao)"]
+        AF.request(url, parameters: ["query":searchText, "page":page], headers: header).validate().response { response in
+            switch response.result {
+            case .success(let value):
+                if searchText != self.currentSearchText {
+                    self.bookList.removeAll()
+                    self.isEnd = false
+                }
+                var currentBookList: [Book] = []
+                let json = JSON(value)
+                let isEnd = json["meta"]["is_end"].boolValue
+                if isEnd {
+                    self.isEnd = true
+                }
+                let fetchBooklist = json["documents"].arrayValue
+                for bookInfo in fetchBooklist {
+                    let title = bookInfo["title"].stringValue
+                    let imageUrl = bookInfo["thumbnail"].stringValue
+                    let price = bookInfo["price"].intValue
+                    let authors = bookInfo["authors"].arrayValue.map { $0.stringValue }
+                    let contents = bookInfo["contents"].stringValue
+                    currentBookList.append(Book(title: title, authors: authors, imageUrl: imageUrl, content: contents, price: price, isLike: false))
+                }
+                self.currentSearchText = searchText
+                self.bookList.append(contentsOf: currentBookList)
+                self.collectionView.reloadData()
+            case .failure(let error):
+                    print(error)
+            }
+            self.flag = false
+        }
     }
 }
 
@@ -111,19 +175,35 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        currentMovieList = movieList.filter({ $0.title.contains(searchText) })
+        currentMovieList = bookList.filter({ $0.title.contains(searchText) })
         if searchText == ""{
-            currentMovieList = movieList
+            currentMovieList = bookList
         }
         collectionView.reloadData()
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         if searchBar.text == "" {
+            bookList.removeAll()
             navigationItem.titleView = nil
             navigationItem.rightBarButtonItem?.isHidden = false
-            currentMovieList = movieList
+            currentMovieList = bookList
         }
         collectionView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else { return }
+        getBookList(searchText: searchText, page: currentPage)
+    }
+}
+
+extension LibraryCollectionViewController {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >=  (scrollView.contentSize.height-(scrollView.frame.height-tabBarController!.tabBar.frame.height)) && !isEnd && !flag{
+            flag = true
+            getBookList(searchText: searchBar.text!, page: nextPage)
+            currentPage += 1
+        }
     }
 }

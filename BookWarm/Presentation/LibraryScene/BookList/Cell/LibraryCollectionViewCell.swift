@@ -17,7 +17,7 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
-    @IBOutlet weak var openDateLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
     override func awakeFromNib() {
@@ -29,13 +29,13 @@ class LibraryCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = Metric.cornerRadius
     }
     
-    func configureCell(movie: Movie) {
-        posterImageView.image = UIImage(named: "\(movie.title)")
-        nameLabel.text = movie.title
-        openDateLabel.text = movie.releaseDate
+    func configureCell(book: Book) {
+        posterImageView.getImageFromUrl(url: book.imageUrl)
+        nameLabel.text = book.title
+        priceLabel.text = String(book.price)
         nameLabel.adjustsFontSizeToFitWidth = true
-        openDateLabel.adjustsFontSizeToFitWidth = true
-        let likeButtonImage = movie.isLike ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        priceLabel.adjustsFontSizeToFitWidth = true
+        let likeButtonImage = book.isLike ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
         likeButton.setImage(likeButtonImage, for: .normal)
     }
     

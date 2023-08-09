@@ -14,15 +14,14 @@ class DetailViewController: UIViewController {
     }
     
     @IBOutlet weak var posterImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var runtimeLabel: UILabel!
-    @IBOutlet weak var rateLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorsLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var dissmissButton: UIButton!
     @IBOutlet weak var memoTextView: UITextView!
     
-    var movie: Movie = Movie(title: "", releaseDate: "", runtime: 0, overview: "", rate: 0.0)
+    var book: Book = Book(title: "", authors: [], imageUrl: "", content: "", price: 0, isLike: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +42,12 @@ class DetailViewController: UIViewController {
     }
     
     func configureView() {
-        title = movie.title
-        posterImageView.image = UIImage(named: movie.title)
-        nameLabel.text = movie.title
-        releaseDateLabel.text = movie.releaseDate
-        runtimeLabel.text = String(movie.runtime)
-        rateLabel.text = String(movie.rate)
-        overviewLabel.text = movie.overview
+        title = book.title
+        titleLabel.text = book.title
+        authorsLabel.text = book.authors.joined(separator: ",")
+        priceLabel.text = String(book.price)
+        contentLabel.text = book.content
+        posterImageView.getImageFromUrl(url: book.imageUrl)
     }
     
     @IBAction func tapDismissButton(_ sender: UIButton) {

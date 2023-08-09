@@ -12,7 +12,7 @@ class BrowseViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
-    let movieList = MovieInfo()
+    let bookList = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +42,9 @@ class BrowseViewController: UIViewController {
         collectionView.collectionViewLayout = flowlayout
     }
     
-    func presentDetailView(movie: Movie) {
+    func presentDetailView(movie: Book) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
-        vc.movie = movie
+        vc.book = movie
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
@@ -54,32 +54,32 @@ class BrowseViewController: UIViewController {
 extension BrowseViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieList.movie.count
+        return bookList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell  =  tableView.dequeueReusableCell(withIdentifier: BrowseTableViewCell.identifier) as? BrowseTableViewCell else { return UITableViewCell() }
-        cell.configureCell(movie: movieList.movie[indexPath.row])
+        cell.configureCell(book: bookList[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presentDetailView(movie: movieList.movie[indexPath.row])
+        presentDetailView(movie: bookList[indexPath.row])
     }
 }
 
 extension BrowseViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieList.movie.count
+        return bookList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BrowseCollectionViewCell.identifier, for: indexPath) as? BrowseCollectionViewCell else { return UICollectionViewCell() }
-        cell.imageView.image = UIImage(named: movieList.movie[indexPath.row].title)
+        cell.imageView.image = UIImage(named: bookList[indexPath.row].title)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presentDetailView(movie: movieList.movie[indexPath.row])
+        presentDetailView(movie: bookList[indexPath.row])
     }
 }

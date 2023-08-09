@@ -94,9 +94,599 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "tapLikeButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2492DCB1-B322-4D44-B23F-275F303500D5 - c575b42633f22f74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.tapLikeButton(__C.UIButton) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "2492DCB1-B322-4D44-B23F-275F303500D5 - c575b42633f22f74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.tapLikeButton(__C.UIButton) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "2492DCB1-B322-4D44-B23F-275F303500D5 - c575b42633f22f74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.tapLikeButton(__C.UIButton) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "2492DCB1-B322-4D44-B23F-275F303500D5 - aa71ddf1d2726b0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BookWarm.Book) -&gt; Swift.Bool in BookWarm.LibraryCollectionViewController.tapLikeButton(__C.UIButton) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C28F425-4115-49A1-AB43-FBAA94B8C794"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "searchBarTextDidEndEditing(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C28F425-4115-49A1-AB43-FBAA94B8C794 - 6d96ed62edafbcd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.searchBarTextDidEndEditing(__C.UISearchBar) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "4C28F425-4115-49A1-AB43-FBAA94B8C794 - 6d96ed62edafbcb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.searchBarTextDidEndEditing(__C.UISearchBar) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EE8DC49-43CF-496D-89FC-621E7CB0E217"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED337AE2-5C09-4697-B86D-4DD7C0D258E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49EC5E73-F698-4724-A399-47433433083E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "594697E2-67E3-46D6-AA0B-14B3996A1B2E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49619E06-9D37-40E2-A2C8-9F5DB2FC62AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "608551EF-18A9-4D29-BFB7-65C7F73D974F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "searchBarTextDidEndEditing(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "608551EF-18A9-4D29-BFB7-65C7F73D974F - 6d96ed62edafa58f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.searchBarTextDidEndEditing(__C.UISearchBar) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "608551EF-18A9-4D29-BFB7-65C7F73D974F - 6d96ed62edafa5ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.searchBarTextDidEndEditing(__C.UISearchBar) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18B2D21A-8644-455F-B698-34D99133FCD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "searchBarTextDidEndEditing(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "18B2D21A-8644-455F-B698-34D99133FCD1 - 6d96ed62edafa5ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.searchBarTextDidEndEditing(__C.UISearchBar) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "18B2D21A-8644-455F-B698-34D99133FCD1 - 6d96ed62edafa5ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookWarm.LibraryCollectionViewController.searchBarTextDidEndEditing(__C.UISearchBar) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D66886B2-A015-49AF-BED4-73919FFEE685"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "getBookList(searchText:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D66886B2-A015-49AF-BED4-73919FFEE685 - f21b01ad46446f80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "D66886B2-A015-49AF-BED4-73919FFEE685 - f21b01ad46446f80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0977C49-C912-4A1E-9D72-50FA53D491E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "getBookList(searchText:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0977C49-C912-4A1E-9D72-50FA53D491E8 - f21b01ad46446fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "B0977C49-C912-4A1E-9D72-50FA53D491E8 - f21b01ad46446fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C371612-68A2-465C-8356-9E8BEFFE2C54"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "getBookList(searchText:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2C371612-68A2-465C-8356-9E8BEFFE2C54 - f21b01ad46446eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "1148">
+               </Location>
+               <Location
+                  uuid = "2C371612-68A2-465C-8356-9E8BEFFE2C54 - f21b01ad46446eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4FD3A510-0FEE-4C10-8439-C5B67825EC6D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "getBookList(searchText:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4FD3A510-0FEE-4C10-8439-C5B67825EC6D - f21b01ad46446e98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1176">
+               </Location>
+               <Location
+                  uuid = "4FD3A510-0FEE-4C10-8439-C5B67825EC6D - f21b01ad46446e98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41830E76-F9E7-4F0F-BB09-5B4301992818"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "getBookList(searchText:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "41830E76-F9E7-4F0F-BB09-5B4301992818 - f21b01ad46446efb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "1200">
+               </Location>
+               <Location
+                  uuid = "41830E76-F9E7-4F0F-BB09-5B4301992818 - f21b01ad46446efb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BookWarm.LibraryCollectionViewController.getBookList(searchText: Swift.String, page: Swift.Int) -&gt; ()"
+                  moduleName = "BookWarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junhwankim/Desktop/Sesac/011/BookWarm/BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "1176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D797FE69-C05C-4490-92FF-7486214F97FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "156F5C0E-720E-48BE-9F53-3DFCBB09F3EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A774A03-7D23-4A68-8937-1F94957139BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A67B9F93-0623-45CB-A825-7C772CEB4CBB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
