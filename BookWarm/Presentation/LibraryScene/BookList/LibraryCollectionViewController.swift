@@ -120,6 +120,7 @@ extension LibraryCollectionViewController {
     }
     
     func getBookList(searchText: String, page: Int) {
+        print(#function)
         let url = "https://dapi.kakao.com/v3/search/book"
         let header: HTTPHeaders = ["Content-Type" : "application/json","Authorization":"KakaoAK \(APIkey.kakao)"]
         AF.request(url, parameters: ["query":searchText, "page":page], headers: header).validate().response { response in

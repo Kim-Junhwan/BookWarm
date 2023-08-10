@@ -172,8 +172,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "searchBarTextDidEndEditing(_:)"
             landmarkType = "7">
             <Locations>
@@ -300,10 +300,10 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "LibraryCollectionViewController"
-            landmarkType = "21">
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "searchBarTextDidEndEditing(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "608551EF-18A9-4D29-BFB7-65C7F73D974F - 6d96ed62edafa58f"
@@ -348,8 +348,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "searchBarTextDidEndEditing(_:)"
             landmarkType = "7">
             <Locations>
@@ -396,8 +396,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "getBookList(searchText:page:)"
             landmarkType = "7">
             <Locations>
@@ -444,8 +444,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "getBookList(searchText:page:)"
             landmarkType = "7">
             <Locations>
@@ -492,8 +492,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "getBookList(searchText:page:)"
             landmarkType = "7">
             <Locations>
@@ -540,8 +540,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "getBookList(searchText:page:)"
             landmarkType = "7">
             <Locations>
@@ -588,8 +588,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "getBookList(searchText:page:)"
             landmarkType = "7">
             <Locations>
@@ -636,22 +636,6 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "156F5C0E-720E-48BE-9F53-3DFCBB09F3EE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "194"
             endingLineNumber = "194"
             landmarkName = "scrollViewDidScroll(_:)"
@@ -668,8 +652,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -684,57 +668,9 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E84D2AA4-DEC3-4410-9013-D4D2A01C6015"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "LibraryCollectionViewController"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A54AA898-6B58-4566-B5C0-294D8C93B43C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6FF3453-481C-41F9-8BB5-88A14EA82C32"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -748,8 +684,8 @@
             filePath = "BookWarm/Presentation/LibraryScene/BookList/LibraryCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "getBookList(searchText:page:)"
             landmarkType = "7">
          </BreakpointContent>
