@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Realm
 
 class LibraryCollectionViewController: UICollectionViewController {
     
@@ -22,6 +23,8 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     
     @IBOutlet weak var tabBarSearchButton: UIBarButtonItem!
+    
+    let repository: RealmRepository = DefaultRealmRepository()
     
     let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -43,13 +46,14 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     var currentSearchText: String = ""
     var flag: Bool = false
+    var isSearching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCollectionViewCell()
         setSearchBar()
         currentMovieList = bookList
-        
+        showSavedBook()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,6 +99,11 @@ class LibraryCollectionViewController: UICollectionViewController {
         navigationItem.rightBarButtonItem?.isHidden.toggle()
         searchBar.becomeFirstResponder()
     }
+    
+    func showSavedBook() {
+        let fetchBook = repository.fetchSavedData(type: SearchedBook.self)
+        bookList = fetchBook.map { $0.toDomain() }
+    }
 }
 
 extension LibraryCollectionViewController {
@@ -116,11 +125,13 @@ extension LibraryCollectionViewController {
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
         let cellMovie = bookList[indexPath.row]
         vc.book = cellMovie
+        if isSearching {
+            repository.saveData(realmObject: SearchedBook(title: cellMovie.title, imageUrl: cellMovie.imageUrl, content: cellMovie.content, price: cellMovie.price, isLike: cellMovie.isLike))
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func getBookList(searchText: String, page: Int) {
-        print(#function)
         let url = "https://dapi.kakao.com/v3/search/book"
         let header: HTTPHeaders = ["Content-Type" : "application/json","Authorization":"KakaoAK \(APIkey.kakao)"]
         AF.request(url, parameters: ["query":searchText, "page":page], headers: header).validate().response { response in
@@ -154,15 +165,18 @@ extension LibraryCollectionViewController {
             
         }
     }
+    
+    
 }
 
 extension LibraryCollectionViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
         searchBar.text = ""
         navigationItem.titleView = nil
         navigationItem.rightBarButtonItem?.isHidden = false
-        collectionView.reloadData()
+        showSavedBook()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -185,12 +199,14 @@ extension LibraryCollectionViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else { return }
+        isSearching = true
         getBookList(searchText: searchText, page: currentPage)
     }
 }
 
 extension LibraryCollectionViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentSize.height)
         if scrollView.contentOffset.y >=  (scrollView.contentSize.height-(scrollView.frame.height-tabBarController!.tabBar.frame.height)) && !isEnd && !flag{
             flag = true
             getBookList(searchText: searchBar.text!, page: nextPage)
