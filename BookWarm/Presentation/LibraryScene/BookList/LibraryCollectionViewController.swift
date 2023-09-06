@@ -125,7 +125,7 @@ extension LibraryCollectionViewController {
         guard let vc = UIStoryboard(name: Identifier.storyboard, bundle: nil).instantiateViewController(identifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
         let cellMovie = bookList[indexPath.row]
         vc.book = cellMovie
-        if isSearching {
+        if isSearching && !repository.checkDataIsContain(type: SearchedBook.self, key: cellMovie.title){
             repository.saveData(realmObject: SearchedBook(title: cellMovie.title, imageUrl: cellMovie.imageUrl, content: cellMovie.content, price: cellMovie.price, isLike: cellMovie.isLike))
         }
         navigationController?.pushViewController(vc, animated: true)

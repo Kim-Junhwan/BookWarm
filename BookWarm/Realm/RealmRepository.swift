@@ -12,9 +12,12 @@ import RealmSwift
 protocol RealmRepository {
     func saveData(realmObject: RealmSwiftObject)
     func fetchSavedData<T: RealmSwiftObject>(type: T.Type) -> Results<T>
+    func checkDataIsContain<T: RealmSwiftObject>(type: T.Type, key: Any) -> Bool
 }
 
 class DefaultRealmRepository: RealmRepository {
+    
+    
     
     let realm = try! Realm()
     
@@ -28,5 +31,11 @@ class DefaultRealmRepository: RealmRepository {
         return realm.objects(type)
     }
     
+    func checkDataIsContain<T: RealmSwiftObject, Key>(type: T.Type, key: Key) -> Bool  {
+        if realm.object(ofType: type, forPrimaryKey: key) == nil {
+            return false
+        }
+        return true
+    }
     
 }
