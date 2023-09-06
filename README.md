@@ -41,3 +41,9 @@ UIScrollViewDelegate의 DidScroll로 페이징 기능을 구현 시 여러번 �
 | --- | --- | 
 |![화면_기록_2023-08-10_오전_2_52_24_AdobeExpress (1)](https://github.com/Kim-Junhwan/BookWarm/assets/58679737/e92cfc9a-3dbb-4e89-ab87-9c65658f1105)|![화면_기록_2023-08-10_오전_2_49_47_AdobeExpress (1)](https://github.com/Kim-Junhwan/BookWarm/assets/58679737/5a4ec772-7069-43db-948d-1adc9ec3df31)|
 
+## 새싹 35회차 과제
+
+- Realm을 사용해서 검색한 책 저장하고 저장한 내용 보여주기
+  
+![Simulator Screen Recording - iPhone 14 - 2023-09-06 at 19 54 35](https://github.com/Kim-Junhwan/BookWarm/assets/58679737/0e8390b2-e639-4d50-a785-068abc6e116e)
+
